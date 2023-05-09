@@ -40,6 +40,8 @@
     <form action="" method="post" class="form">
         <input type="text" class="cari" name="keyword" placeholder="Pencarian" autofocus autocomplete="off">
         <button type="submit" class="logo-cari" name="cari"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="submit" class="logo-cari" name="desc"><i class="fa-solid fa-circle-arrow-up"></i></i></button>
+        <button type="submit" class="logo-cari" name="asc"><i class="fa-solid fa-circle-arrow-down"></i></i></button>
         <a href="index.php" class="pencet"><button name="cari">Refresh</button></a>
     </form>
     <div class="list-table center" style="overflow-x: auto;">
@@ -72,8 +74,16 @@
                                         gambar_product LIKE '%".$_POST['keyword']."%' OR
                                         waktu_up LIKE '%".$_POST['keyword']."%'
                                         ");
-                    
+
                 }
+                elseif (isset($_POST["desc"])) {
+                    $result = mysqli_query($db, "SELECT * FROM product ORDER BY harga_product DESC");                   
+                }
+                elseif (isset($_POST["asc"])) {
+                    $result = mysqli_query($db, "SELECT * FROM product ORDER BY harga_product ASC");                   
+                }
+                      
+                
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)){
                 ?>
