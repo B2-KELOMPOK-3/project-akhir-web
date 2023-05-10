@@ -6,9 +6,12 @@
     $namaakun = $_SESSION["username"];
     if(isset($_SESSION["username"]) && $namaakun == "admin"){
         echo header("location:admin.php");
+    }elseif(isset($_SESSION["username"]) && $namaakun == "staff"){
+        echo header("location:staff.php");    
     }elseif(isset($_SESSION["username"])){
         echo header("location:index.php");
-    }else{
+    }else{    
+        
 
   if(isset($_POST['submit'])){     
 
@@ -30,6 +33,11 @@
             alert('selamat datang $username');
             document.location.href='admin.php';
         </script>";
+    }elseif($queryhistory && $username == "staff"){
+        echo " <script>
+            alert('selamat datang $username');
+            document.location.href='staff.php';
+        </script>"; 
     }elseif($queryhistory){
         echo " <script>
         alert('selamat datang $username');
