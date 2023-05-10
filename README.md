@@ -142,7 +142,7 @@ Apabila user telah mengisi data form pembayaran dengan benar, maka transaksi pem
 ![image](https://github.com/B2-KELOMPOK-3/project-akhir-web/assets/120227492/ddf62b59-a1e9-4134-98e5-1d8c3ef96d83)![image](https://github.com/B2-KELOMPOK-3/project-akhir-web/assets/120227492/1f71928c-ccbe-49ad-b762-d5b6a544b526)
 
 
-> Sekian tutorial dari kami
-> Terima kasih telah menggunakan website kami :)
+>**Sekian tutorial dari kami.**
+>**Terima kasih telah menggunakan website kami :)**
 
 
